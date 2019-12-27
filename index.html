@@ -1,1 +1,126 @@
-<div id="app"></div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jude moon">
+    <title>Seminario de Visualización</title>
+
+    <!-- load d3 and dimple libraries -->
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+
+    <!-- add styles to text and graphics -->
+    <style>
+        h1 {
+            background-color: blue;
+            color: floralwhite;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        h2 {
+            font-size: 1.4em;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        h4 {
+            font-family: Helvetica, sans-serif;
+            text-align: left;
+        }
+        div.text {
+            font-family: Helvetica;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-title">Seminario Visualización: Accidentes de tráfico </h1>
+
+    <h4 class="main-autor">Nombre:
+    <br>
+    Óscar Sáez Trujillo</h3>
+   
+    <h4 class="main-url">Url:
+      <br>
+      <a href="https://js-7czhan.stackblitz.io">https://js-7czhan.stackblitz.io/</a></h3>
+   
+    <h4 class="main-fuente">Fuente:
+      <br>
+      <a href="https://opendata-ajuntament.barcelona.cat/data/es/dataset/accidents-vehicles-gu-bcn">https://opendata-ajuntament.barcelona.cat/data/es/dataset/accidents-vehicles-gu-bcn</a>
+      <br>
+      <a href="https://opendata-ajuntament.barcelona.cat/data/es/dataset/accidents-causes-gu-bcn">https://opendata-ajuntament.barcelona.cat/data/es/dataset/accidents-causes-gu-bcn</a>
+      </h3>
+    
+    <h4 class="main-fecha">Fecha:
+      <br>
+      27/12/2019</h4>
+    <br>
+    <!-- add intro text to the page body -->
+    <div class="summary">
+        <h2 class="text-title">Resumen</h2>
+        <div class="text">
+        El objetivo de este proyecto es crear visualizaciones sobre accidentes de tráfico ocurridos en Barcelona durante el año 2018.
+        <br>
+        Las preguntas que quiero responder con este análisis son:
+        <br>
+        <br>
+        - ¿Realmente influye el color del vehículo en los accidentes de tráfico?
+        <br>
+        - ¿En qué momento del día ocurren más accidentes?
+        <br>
+        - ¿Cuál es la causa que provoca la mayoría de los accidentes de tráfico?
+        <br>
+        <br>
+        La audiencia son el profesor y los alumnos de la asignatura de Visualización de Datos.
+        <br>
+        El objetivo consiste es realizar un ejemplo sobre un pequeño trabajo práctico de visualización de datos aplicacando algunas técnicas y herramientas aprendidas durante la asignatura.
+
+        </div>
+    </div>
+
+    <!-- add data visualization -->
+    <div class="plot">
+        <!-- First chart -->
+        <h2 class="plot-title">Accidentes según el color del vehículo</h2>
+        <div class="text">
+          En el siguiente gráfico de barras, creado usando la herramienta Google Sheet, puede verse el número de accidentes en función del color del vehículo.
+          <br>
+          Como puede verse, los vehículos de colores negro, blanco y gris sufren un mayor número de accidentes:
+        </div>  
+
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR9dHJ74kqk4c_I4GDRLtfX2Kc1Ls0NC1xqGkLO6JPqwtOXPddSWXrA6sHVTuvrh3XwyqOT_dvyRR4m/pubchart?oid=455984358&amp;format=image"></iframe>
+
+        <!-- Second chart -->
+        <h2 class="plot-title">Accidentes según el momento del día</h2>
+        <div class="text">
+        En el siguiente gráfico circular o de tarta, creado con la herramienta Google Sheet, se muestra la proporción de accidentes en función del momento del día (mañana, tarde o noche)
+        <br>
+        Como puede verse, la mayoría de los accidentes ocurren por la tarde:
+        </div>
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR9dHJ74kqk4c_I4GDRLtfX2Kc1Ls0NC1xqGkLO6JPqwtOXPddSWXrA6sHVTuvrh3XwyqOT_dvyRR4m/pubchart?oid=749364819&amp;format=interactive"></iframe>
+
+        <!-- Third chart -->
+        <h2 class="plot-title">Accidentes según causalidad y momento del día</h2>
+        <div class="text">
+        En el siguiente gráfico de barras, creado con la herramienta Tableau, incluimos la variable de la causalidad del accidente en función del momento del día.
+        <br>
+        Hemos excluido aquellos accidentes donde la causa no ha sido definida.
+        <br>
+        Como puede verse, el principal motivo de accidentes de tráfico es el alcohol en el horario nocturno:
+        </div> 
+
+
+
+</html>
